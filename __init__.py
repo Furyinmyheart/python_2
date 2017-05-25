@@ -13,7 +13,7 @@ from hw_04_defs import *
 #                                    user="root", password="Flammable1941")
 #    return my_conn
 
-# главное окно
+
 
 root = Tk()
 root.title("Аутентификация")
