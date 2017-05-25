@@ -40,7 +40,7 @@ class Artificial_intelligence:
 
     def __str__(self):
         return 'ID ИИ: {}, наименование : {}, разработчик: {}'.format(self._id, self._name, self._developer)
-
+    
 
 class Human_ai(Artificial_intelligence):
 
@@ -69,6 +69,7 @@ class Human_ai(Artificial_intelligence):
     def __str__(self):
         return super().__str__() + ', пол: {}, возраст: {},'.format(self._gender, self._age)
 
+    
 class Artificial_network:
 
     def __init__(self, count_users):
@@ -93,6 +94,7 @@ class Artificial_network:
     def __str__(self):
         return '\n'.join(map(str, self._ai_network))
 
+    
 class Get_connect_to_db:
     host = 'localhost'
     database = 'my_scheme_py'
