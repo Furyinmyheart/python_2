@@ -1,1 +1,1 @@
-# python_2
+# Работа с Tkinter и базой MySQL 
