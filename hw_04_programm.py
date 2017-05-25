@@ -1,15 +1,14 @@
 __author__ = 'Андриченко Михаил Васильевич'
 
-from hw_04_defs import *
 import tkinter
 from tkinter import *
 import threading
+from hw_04_defs import *
 
 #my_menu()
 #my_conn = Get_connect_to_db(host="localhost", database="my_scheme_py",
 #                                    user="root", password="Flammable1941")
 
-#______________________________
 def main_root():
 
     def connect_button():
@@ -17,20 +16,14 @@ def main_root():
                                     user="root", password="Flammable1941")
         return my_conn
 
-    # ______________________________
-
     def clear_text():
         output.delete(1.0, END)
-
-    # ______________________________
 
     def print_button():
         clear_text()
         test = connect_button().print_ai()
         for value in test:
             output.insert("0.0", str(value) + '\n')
-
-    # ______________________________
 
     def write_to_file_button(filename, exporting_text):
         file = open(filename, "w")
@@ -48,8 +41,6 @@ def main_root():
 
         t1.join()
         t2.join()
-
-    # ______________________________
 
     def add_button():
         root1 = Tk()
@@ -100,8 +91,6 @@ def main_root():
 
         root1.mainloop()
 
-    # ______________________________
-
     def del_button():
         root2 = Tk()
         root2.title("Удаление ИИ")
@@ -130,8 +119,6 @@ def main_root():
         bottom_pack.pack(side='bottom')
 
         root2.mainloop()
-
-    # ________________________________________________________
 
     def change_button():
         root3 = Tk()
@@ -218,5 +205,4 @@ def main_root():
 
     root.mainloop()
 
-#main_root()
-#______________________________
+# main_root()
