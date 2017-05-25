@@ -1,19 +1,7 @@
 __author__ = 'Андриченко Михаил Васильевич'
 
-import tkinter
 from tkinter import *
-
 from hw_04_defs import *
-
-#my_conn = Get_connect_to_db(host="localhost", database="my_scheme_py",
-#                                    user="root", password="Flammable1941")
-
-#def connect_button():
-#    my_conn = Get_connect_to_db(host="localhost", database="my_scheme_py",
-#                                    user="root", password="Flammable1941")
-#    return my_conn
-
-
 
 root = Tk()
 root.title("Аутентификация")
@@ -43,20 +31,14 @@ def main_root():
                                     user="root", password="Flammable1941")
         return my_conn
 
-    # ______________________________
-
     def clear_text():
         output.delete(1.0, END)
-
-    # ______________________________
 
     def print_button():
         clear_text()
         test = connect_button().print_ai()
         for value in test:
             output.insert("0.0", str(value) + '\n')
-
-    # ______________________________
 
     def write_to_file_button(filename, exporting_text):
         file = open(filename, "w")
@@ -74,8 +56,6 @@ def main_root():
 
         t1.join()
         t2.join()
-
-    # ______________________________
 
     def add_button():
         root1 = Tk()
@@ -126,8 +106,6 @@ def main_root():
 
         root1.mainloop()
 
-    # ______________________________
-
     def del_button():
         root2 = Tk()
         root2.title("Удаление ИИ")
@@ -156,8 +134,6 @@ def main_root():
         bottom_pack.pack(side='bottom')
 
         root2.mainloop()
-
-    # ________________________________________________________
 
     def change_button():
         root3 = Tk()
@@ -246,7 +222,7 @@ def main_root():
 
 def auth():
 
-    text = Get_connect_to_db.aft(Get_connect_to_db, login.get(), password.get())              ##!!!!!!!!!!!!!!!!!!!!!!!!
+    text = Get_connect_to_db.aft(Get_connect_to_db, login.get(), password.get())
     if (str(text[0]) == "0"):
     # вызов метода для отображения интерфейса администратора
         main_root()
@@ -276,6 +252,5 @@ butt_2.pack(side='right')
 label_pack.pack(side='left')
 entry_pack.pack(side='right')
 bottom_pack.pack(side='bottom')
-
 
 root.mainloop()
