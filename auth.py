@@ -8,7 +8,6 @@ from hw_04_defs import *
 my_conn = Get_connect_to_db(host="localhost", database="my_scheme_py",
                                     user="root", password="Flammable1941")
 
-
 def auth():
 
     def check_log_pass():
@@ -39,15 +38,11 @@ def auth():
     password = Entry(entry_pack, width=15)
     password.pack(side='top')
     label_password = Label(label_pack, text="Пароль")
-
     label_password.pack(side='top')
-
-
-
+    
     butt = Button(bottom_pack, text="Войти", bg="white", fg="black", width=15, height=1, command=check_log_pass)
 
     butt.pack(side='top')
-
     entry_pack.pack(side='right')
     label_pack.pack(side='left')
     bottom_pack.pack(side='bottom')
