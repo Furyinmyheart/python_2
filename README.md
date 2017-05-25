@@ -1,5 +1,5 @@
 # Работа с Tkinter и базой MySQL 
 
-# open auth.py for start program. 
+# open __init__.py for start program. 
 # login: 'root'
 # pass: 'Flammable1941'
